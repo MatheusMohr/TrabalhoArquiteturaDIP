@@ -4,9 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrabalhoArquiteturaDIP
+namespace Trabalho_Arquitetura_DIP
 {
-    class Switch
+    public class Switch
     {
-    }
+        private IDevice _device;
+
+        public Switch(IDevice device)
+        {
+            _device = device;
+        }
+
+        public void Press()
+        {
+            _device.Operate();
+        }
+    }   
 }
